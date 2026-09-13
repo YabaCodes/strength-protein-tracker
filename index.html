@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="description" content="Workout and daily protein tracker" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Strength + Protein</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow" id="todayLabel"></p>
+        <h1>Strength + Protein</h1>
+      </div>
+      <button id="installBtn" class="ghost hidden" type="button">Install</button>
+    </header>
+
+    <main id="view" class="content" aria-live="polite"></main>
+
+    <nav class="bottom-nav" aria-label="Primary">
+      <button class="nav-btn active" data-view="today" type="button"><span>●</span><small>Today</small></button>
+      <button class="nav-btn" data-view="workout" type="button"><span>◆</span><small>Workout</small></button>
+      <button class="nav-btn" data-view="progress" type="button"><span>▲</span><small>Progress</small></button>
+      <button class="nav-btn" data-view="settings" type="button"><span>⚙</span><small>Settings</small></button>
+    </nav>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="restTimer" class="rest-timer hidden" aria-live="polite">
+      <div>
+        <strong id="restTimerLabel">Rest</strong>
+        <span id="restTimerValue">01:30</span>
+      </div>
+      <button id="cancelTimer" type="button">Stop</button>
+    </div>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
